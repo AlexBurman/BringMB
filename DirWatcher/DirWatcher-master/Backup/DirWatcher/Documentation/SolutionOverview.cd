@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Comment CommentText="Main thread Starts. Tries to read config file and file with information about previously sent warnings. An list of ConfigObjects are created and returned.">
+    <Position X="0.74" Y="0.865" Height="1.177" Width="2.033" />
+  </Comment>
+  <Comment CommentText="Each of the folders found are checked for files older than X number of minutes. A list is built containing the full filepath and a check is also done to see if the application should send out a warning (checks if it previously has warned about this file).">
+    <Position X="4.594" Y="0.781" Height="1.135" Width="2.606" />
+  </Comment>
+  <Comment CommentText="Sends a mail containing a list of the files that has not  been picked">
+    <Position X="7.552" Y="1.635" Height="0.75" Width="1.7" />
+  </Comment>
+  <Comment CommentText="Writes to the &quot;warned&quot; file. Will contain a list of files that has been warned about. No new warnings will be sent for the files before the next day. (cleanup will delete the warned file if it is one day old and all warnings will be sent again if problem has not been fixed by then).">
+    <Position X="9.865" Y="0.99" Height="1.333" Width="2.544" />
+  </Comment>
+  <Class Name="DirWatcher.Program">
+    <Position X="0.5" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DirWatcher.ReadFiles">
+    <Position X="3" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAEAQAAAAAAAAAABABA=</HashCode>
+      <FileName>ReadFiles.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DirWatcher.ConfigObject">
+    <Position X="3" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAEAACAAAAAAACAAAAAAAAAAAAAAACQAAAAAA=</HashCode>
+      <FileName>ConfigObject.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DirWatcher.MonitorFiles">
+    <Position X="5.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQA=</HashCode>
+      <FileName>MonitorFiles.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DirWatcher.SendMail">
+    <Position X="7.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>SendMail.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DirWatcher.WriteFiles">
+    <Position X="10.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAEAAAAA=</HashCode>
+      <FileName>WriteFiles.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
